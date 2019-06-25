@@ -69,7 +69,7 @@ export default class Dyn extends React.Component {
   }  
 
   componentDidMount() {
-    console.log('window.innerHeight->', window.innerHeight);
+    console.log('window.innerHeight=>', window.innerHeight);
   }
 
   mapTypeToComponent = (typeName, componentProps, image, siteLanguage, componentList) => {

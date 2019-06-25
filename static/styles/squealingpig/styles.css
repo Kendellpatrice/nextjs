@@ -41,9 +41,10 @@
 
 .c-nav__item {
   color: #707271;
-  font-size: 18px;
+  font-size: 22px;
   margin: 0 18px;
   position: relative;
+  text-transform: lowercase;
 }
 
 .c-nav__item.active {
@@ -73,6 +74,11 @@
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  background-color: white;
+  padding-top: 114px;
+  padding-bottom: 40px;
+  min-height: 100vh;
 }
 
 
@@ -86,6 +92,20 @@
 }
 
 body {
-  margin-bottom: 40px;
+  background-color: #a8b5e2;
 }
 
+.c-image__wrapper {
+  position: absolute;
+  top: 55px;
+  left: 100px;
+}
+
+h1, h2, .nav {
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Times New Roman", serif;
+}
+
+.u-component-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}

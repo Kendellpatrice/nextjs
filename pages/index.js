@@ -17,6 +17,8 @@ export default class Dyn extends React.Component {
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
     
+    console.log(query)
+
     console.log('entry')
 
     if (query.page != '/')

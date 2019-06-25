@@ -16,9 +16,15 @@ export default class Dyn extends React.Component {
     let siteLanguage = query.lang != null ? query.lang : 'en-AU';
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
+    let siteId = ''
 
     if (req != null)
     {
+      if (req.headers['x-forwarded-host'] == 'nextjs-git-ativo-dev.kendellpatrice1.now.sh')
+        siteId = 'ativo'
+      else if (req.headers['x-forwarded-host'] == 'nextjs-git-pig-dev.kendellpatrice1.now.sh')
+        siteId = 'squealingpig'
+
       console.log('host->' + req.headers['x-forwarded-host'])
     }
     
@@ -28,9 +34,7 @@ export default class Dyn extends React.Component {
 
     if (page == '/undefined')
       page = '/'
-
-    // Get Site Id / Name
-    var siteId = ''
+    
     switch (siteName) {
       case 'ativo':
         siteName = 'ativo'

@@ -16,14 +16,13 @@ export default class Dyn extends React.Component {
     let siteLanguage = query.lang != null ? query.lang : 'en-AU';
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
-    
-    //console.log('req-' + JSON.stringify(req.headers))
-    //console.log('req-host-' + JSON.stringify(req.headers['x-forwarded-host']))
+
     if (req != null)
     {
       console.log('host->' + req.headers['x-forwarded-host'])
     }
     
+    console.log('Running getInit...')
     if (query.page != '/')
       page = '/' + query.page;
 

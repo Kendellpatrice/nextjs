@@ -20,12 +20,16 @@ export default class Dyn extends React.Component {
 
     if (req != null)
     {
-      if (req.headers['x-forwarded-host'] == 'nextjs-git-ativo-dev.kendellpatrice1.now.sh')
-        siteId = 'ativo'
-      else if (req.headers['x-forwarded-host'] == 'nextjs-git-pig-dev.kendellpatrice1.now.sh')
-        siteId = 'squealingpig'
-
-      console.log('host->' + req.headers['x-forwarded-host'])
+      if (req.headers['x-forwarded-host'] == 'nextjs-git-ativo-dev.kendellpatrice1.now.sh'){
+        siteName = 'ativo'
+      }
+        
+      if (req.headers['x-forwarded-host'] == 'nextjs-git-pig-dev.kendellpatrice1.now.sh'){
+        siteName = 'squealingpig'
+      }
+        
+      console.log('siteName=>' + siteName)
+      console.log('host=>' + req.headers['x-forwarded-host'])
     }
     
     console.log('Running getInit...')

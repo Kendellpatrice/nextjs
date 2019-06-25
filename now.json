@@ -1,6 +1,5 @@
 {   "version":2,
     "name":"nextjs",
-    "alias": ["squealingpig.rhm.net.au", "ativo.rhm.net.au"],
     "builds":[
         {"src":"package.json","use":"@now/next"}
     ],

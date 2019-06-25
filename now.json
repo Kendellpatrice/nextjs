@@ -1,5 +1,6 @@
 {   "version":2,
     "name":"nextjs",
+    "alias": ["nextjs-git-pig-dev.kendellpatrice1.now.sh", "nextjs-git-ativo-dev.kendellpatrice1.now.sh"],
     "builds":[
         {"src":"package.json","use":"@now/next"}
     ],

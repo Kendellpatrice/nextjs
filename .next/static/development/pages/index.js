@@ -21188,7 +21188,7 @@ function (_React$Component) {
             image: image,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 75
+              lineNumber: 76
             },
             __self: this
           }));
@@ -21198,7 +21198,7 @@ function (_React$Component) {
             image: image,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 77
+              lineNumber: 78
             },
             __self: this
           }));
@@ -21207,7 +21207,7 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_simpletext_js__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, componentProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 79
+              lineNumber: 80
             },
             __self: this
           }));
@@ -21216,7 +21216,7 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_richtextfield_js__WEBPACK_IMPORTED_MODULE_15__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, componentProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 81
+              lineNumber: 82
             },
             __self: this
           }));
@@ -21227,7 +21227,7 @@ function (_React$Component) {
             siteLanguage: siteLanguage,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 83
+              lineNumber: 84
             },
             __self: this
           }));
@@ -21267,7 +21267,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127
+            lineNumber: 128
           },
           __self: this
         }, menuComponentList[0].slugs.map(function (item, index) {
@@ -21284,14 +21284,14 @@ function (_React$Component) {
             key: "key-".concat(index),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 136
+              lineNumber: 137
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("a", {
             className: "c-nav__item ".concat(url.asPath === customRoute ? 'active' : ''),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 137
+              lineNumber: 138
             },
             __self: this
           }, componentProps.navLabel != null ? componentProps.navLabel.values[0].value : ''));
@@ -21316,19 +21316,19 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_18___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 153
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 154
         },
         __self: this
       }, "Treasure Wine Estates - ", siteName), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
@@ -21338,7 +21338,7 @@ function (_React$Component) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 155
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
@@ -21347,34 +21347,34 @@ function (_React$Component) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 156
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "c-site-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 158
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("nav", {
         className: "nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 159
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "c-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 160
         },
         __self: this
       }, this.getMenu(menuComponentList, siteName))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_mylayout_js__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 166
         },
         __self: this
       }, componentList[0] && componentList[0].slotContent ? componentList[0].slotContent.map(function (item, index) {
@@ -21392,7 +21392,7 @@ function (_React$Component) {
           key: "key-".concat(index),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 174
+            lineNumber: 175
           },
           __self: this
         }, _this3.mapTypeToComponent(item['@type'], componentProps, image, siteLanguage, componentList));
@@ -21406,18 +21406,19 @@ function (_React$Component) {
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
         var _this4 = this;
 
-        var pathname, query, req, page, siteLanguage, urlId, siteName, siteId, treeRootUrl, slugId, dataMenu, pageId, url, res, data;
+        var query, page, siteLanguage, urlId, siteName, siteId, treeRootUrl, slugId, dataMenu, pageId, url, res, data;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                pathname = _ref.pathname, query = _ref.query, req = _ref.req;
+                query = _ref.query;
                 // Set the site language with a default of English
                 page = '';
                 siteLanguage = query.lang != null ? query.lang : 'en-AU';
                 urlId = query.id != null ? query.id : '';
                 siteName = query.site != null ? query.site : '';
-                console.log('entry');
+                console.log('entry=>' + window.location.href); //console.log(window.location.href); 
+
                 if (query.page != '/') page = '/' + query.page;
                 if (page == '/undefined') page = '/'; // Get Site Id / Name
 

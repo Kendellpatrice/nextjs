@@ -10,16 +10,15 @@ import TwoColumn from '../components/twocolumn/layout.js'
 
 export default class Dyn extends React.Component {
   
-  static async getInitialProps({ pathname, query, req }) {
+  static async getInitialProps({ query }) {
     // Set the site language with a default of English
     let page = ''
     let siteLanguage = query.lang != null ? query.lang : 'en-AU';
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
     
-    console.log(query)
-
-    console.log('entry')
+    console.log('entry=>' + window.location.href)
+    //console.log(window.location.href); 
 
     if (query.page != '/')
       page = '/' + query.page;

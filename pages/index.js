@@ -19,8 +19,11 @@ export default class Dyn extends React.Component {
     
     //console.log('req-' + JSON.stringify(req.headers))
     //console.log('req-host-' + JSON.stringify(req.headers['x-forwarded-host']))
-    console.log('req-host-non-json-' + req.headers['x-forwarded-host'])
-
+    if (req != null)
+    {
+      console.log('host->' + req.headers['x-forwarded-host'])
+    }
+    
     if (query.page != '/')
       page = '/' + query.page;
 

@@ -18,7 +18,7 @@ export default class Dyn extends React.Component {
     let siteName = query.site != null ? query.site : '';
     
     console.log('req-' + JSON.stringify(req.headers))
-    console.log('req-' + JSON.stringify(req.host))
+    console.log('req-host-' + JSON.stringify(req.host))
     console.log('res-' + res)
     console.log('route-' + route)
     //console.log('query-' + query) 

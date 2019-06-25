@@ -17,7 +17,7 @@ export default class Dyn extends React.Component {
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
     
-    console.log('entry=>' + window.location.href)
+    //console.log('entry=>' + window.location.href)
     //console.log(window.location.href); 
 
     if (query.page != '/')
@@ -67,6 +67,10 @@ export default class Dyn extends React.Component {
 
     return { data, dataMenu, siteName, siteLanguage, page }
   }  
+
+  componentDidMount() {
+    console.log('window.innerHeight', window.innerHeight);
+  }
 
   mapTypeToComponent = (typeName, componentProps, image, siteLanguage, componentList) => {
     componentProps.siteLanguage = siteLanguage

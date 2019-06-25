@@ -1469,7 +1469,7 @@ function (_React$Component) {
             image: image,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 80
             },
             __self: this
           }));
@@ -1479,7 +1479,7 @@ function (_React$Component) {
             image: image,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 78
+              lineNumber: 82
             },
             __self: this
           }));
@@ -1488,7 +1488,7 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_simpletext_js__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, componentProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 80
+              lineNumber: 84
             },
             __self: this
           }));
@@ -1497,7 +1497,7 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_richtextfield_js__WEBPACK_IMPORTED_MODULE_15__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, componentProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 82
+              lineNumber: 86
             },
             __self: this
           }));
@@ -1508,7 +1508,7 @@ function (_React$Component) {
             siteLanguage: siteLanguage,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 84
+              lineNumber: 88
             },
             __self: this
           }));
@@ -1525,6 +1525,11 @@ function (_React$Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Dyn, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log('window.innerHeight', window.innerHeight);
+    }
+  }, {
     key: "getGuidFromId",
     value: function getGuidFromId(componentId) {
       if (componentId.length >= 0) {
@@ -1548,7 +1553,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 132
           },
           __self: this
         }, menuComponentList[0].slugs.map(function (item, index) {
@@ -1565,14 +1570,14 @@ function (_React$Component) {
             key: "key-".concat(index),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 137
+              lineNumber: 141
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("a", {
             className: "c-nav__item ".concat(url.asPath === customRoute ? 'active' : ''),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 138
+              lineNumber: 142
             },
             __self: this
           }, componentProps.navLabel != null ? componentProps.navLabel.values[0].value : ''));
@@ -1597,19 +1602,19 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 156
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_18___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 157
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 158
         },
         __self: this
       }, "Treasure Wine Estates - ", siteName), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
@@ -1619,7 +1624,7 @@ function (_React$Component) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 159
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
@@ -1628,34 +1633,34 @@ function (_React$Component) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156
+          lineNumber: 160
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "c-site-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("nav", {
         className: "nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 163
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "c-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 164
         },
         __self: this
       }, this.getMenu(menuComponentList, siteName))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_mylayout_js__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 170
         },
         __self: this
       }, componentList[0] && componentList[0].slotContent ? componentList[0].slotContent.map(function (item, index) {
@@ -1673,7 +1678,7 @@ function (_React$Component) {
           key: "key-".concat(index),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175
+            lineNumber: 179
           },
           __self: this
         }, _this3.mapTypeToComponent(item['@type'], componentProps, image, siteLanguage, componentList));
@@ -1697,34 +1702,34 @@ function (_React$Component) {
                 page = '';
                 siteLanguage = query.lang != null ? query.lang : 'en-AU';
                 urlId = query.id != null ? query.id : '';
-                siteName = query.site != null ? query.site : '';
-                console.log('entry=>' + window.location.href); //console.log(window.location.href); 
+                siteName = query.site != null ? query.site : ''; //console.log('entry=>' + window.location.href)
+                //console.log(window.location.href); 
 
                 if (query.page != '/') page = '/' + query.page;
                 if (page == '/undefined') page = '/'; // Get Site Id / Name
 
                 siteId = '';
                 _context.t0 = siteName;
-                _context.next = _context.t0 === 'ativo' ? 12 : 15;
+                _context.next = _context.t0 === 'ativo' ? 11 : 14;
                 break;
 
-              case 12:
+              case 11:
                 siteName = 'ativo';
                 siteId = '99757712-7a28-4ce5-94f3-82c2f936cbc6';
-                return _context.abrupt("break", 18);
+                return _context.abrupt("break", 17);
 
-              case 15:
+              case 14:
                 siteName = 'squealingpig';
                 siteId = 'e904f0cd-7f15-4773-807a-f35f322b18e8';
-                return _context.abrupt("break", 18);
+                return _context.abrupt("break", 17);
 
-              case 18:
+              case 17:
                 // Url for Root of CMS Tree, returning all nodes
                 treeRootUrl = "https://c1.adis.ws/cms/content/query?query=%7b%22sys.iri%22:%22http://content.cms.amplience.net/".concat(siteId, "%22%7d&scope=tree&store=twe&fullBodyObject=true"); // Get route from Data
 
                 slugId = '';
                 dataMenu = '';
-                _context.next = 23;
+                _context.next = 22;
                 return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_16___default()(treeRootUrl).then(function (response) {
                   return response.json();
                 }).then(function (json) {
@@ -1732,19 +1737,19 @@ function (_React$Component) {
                   dataMenu = json;
                 });
 
-              case 23:
+              case 22:
                 pageId = '';
                 if (urlId != '') pageId = urlId;else if (slugId != '') pageId = slugId;else pageId = siteId;
                 url = "https://c1.adis.ws/cms/content/query?query=%7b%22sys.iri%22:%22http://content.cms.amplience.net/".concat(pageId, "%22%7d&scope=tree&store=twe&fullBodyObject=true");
-                _context.next = 28;
+                _context.next = 27;
                 return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_16___default()(url);
 
-              case 28:
+              case 27:
                 res = _context.sent;
-                _context.next = 31;
+                _context.next = 30;
                 return res.json();
 
-              case 31:
+              case 30:
                 data = _context.sent;
                 return _context.abrupt("return", {
                   data: data,
@@ -1754,7 +1759,7 @@ function (_React$Component) {
                   page: page
                 });
 
-              case 33:
+              case 32:
               case "end":
                 return _context.stop();
             }

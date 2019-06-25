@@ -21246,7 +21246,7 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Dyn, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log('window.innerHeight', window.innerHeight);
+      console.log('window.innerHeight->', window.innerHeight);
     }
   }, {
     key: "getGuidFromId",

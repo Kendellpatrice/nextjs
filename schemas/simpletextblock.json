@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/simpletextblock.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"intro":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Intro",
+                        "description":"Text for the intro",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":200
+                     }
+                  }
+               }
+            }
+         }
+      },
+	  "paragraph":{
+		  "type": "array",
+		  "minItems": 0,
+		  "maxItems": 10,
+		  "items": {
+			  "allOf":[  
+            	{  
+               	"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            	}
+         	],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Paragraph",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":5000
+                     }
+                  }
+               }
+            }
+         }
+		  }
+	  }
+
+	},
+	"propertyOrder": ["intro","paragraph"]
+}

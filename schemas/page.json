@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/page.json",
+
+	 "title": "Title",
+    "description": "Description",
+
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+
+    "type": "object",
+    "properties": {
+        "slotContent":{
+            "title": "content",
+            "description": "description",
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 5,
+            "items": {
+                "allOf": [
+                    { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+                    {
+                        "properties": {
+                            "contentType": {
+                                "enum": [
+                                    "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/banner.json",
+									"https://raw.githubusercontent.com/janxl/nextjs/master/schemas/simpletextblock.json",
+                                    "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/richtextfield.json",
+                                    "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/twocolumncontainer.json",
+                                    "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/image.json"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+
+    },
+    "propertyOrder": []
+}

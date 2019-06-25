@@ -1,1 +1,13 @@
-{"version":2,"name":"nextjs","builds":[{"src":"package.json","use":"@now/next"}]}
+{   "version":2,
+    "name":"nextjs",
+    "alias": ["squealingpig.rhm.net.au", "ativo.rhm.net.au"],
+    "builds":[
+        {"src":"package.json","use":"@now/next"}
+    ],
+    "routes":[
+        {"src":"/favicon.ico","dest":"/favicon.ico"},
+        {"src":"/_next/(.*)$","dest":"/_next/$1"},
+        {"src":"/static/(.*)$","dest":"/static/$1"},
+        {"src":"/(.*)$","dest":"/index?page=$1"}
+    ]
+}

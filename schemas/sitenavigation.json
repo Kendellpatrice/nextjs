@@ -1,0 +1,47 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/sitenavigation.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"slugs":{
+			"title": "slugs",
+			"description": "add all the slugs for the entire site navigation",
+			"type": "array",
+			"minItems": 0,
+			"maxItems": 100,
+			"items": {
+				"allOf": [
+					{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+					{
+						"properties": {
+							"contentType": {
+								"enum": [
+									"https://raw.githubusercontent.com/janxl/nextjs/master/schemas/slugnavigation.json"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"styleSheet": {
+			"title": "Theme",
+			"description": "Url for the theme file (.css)",
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 100
+		}
+		
+	},
+	"propertyOrder": []
+}

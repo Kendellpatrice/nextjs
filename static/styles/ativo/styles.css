@@ -1,0 +1,80 @@
+.c-banner {
+  height: calc(100vh - 137px);
+  width: 100%;
+  background-size: cover;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-banner__heading {
+  font-size: 1.7em;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.c-banner__sub-heading {
+  font-size: 1em;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  max-width: 456px;
+}
+
+.c-richtext {
+  margin-top: 40px;
+}
+
+.c-simple-text {
+  margin-top: 40px;
+}
+
+.c-simple-text__paragraph {
+  font-size: 1em;
+  color: #333333;
+}
+
+body {
+  margin-bottom: 40px;
+}
+
+.c-two-col {
+  height: 415px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f3ef;
+  margin-top: 40px;
+}
+
+.c-two-col__heading {
+  font-size: 2.8rem;
+}
+
+.c-two-col__container-image {
+  width: auto;
+  height: 415px;
+  background-size: contain;
+  background-image: url('https://www.ativospritz.com/-/media/Images/Ativo/Products/Bottle-white.ashx?modified=20180920004101&h=540&w=618&la=en&hash=0DACAE6097110AF9864527F3C98CF7420656241F')
+}
+
+.c-two-col__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-image {
+  height: 37px;
+  margin-top: -7px;
+}
+
+.c-image__wrapper {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 19px;
+}

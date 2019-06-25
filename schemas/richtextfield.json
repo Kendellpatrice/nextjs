@@ -1,0 +1,63 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/richtextfield.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"title":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Title",
+                        "description":"Title for body",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":100
+                     }
+                  }
+               }
+            }
+         }
+      },
+	  "body":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Body",
+                        "description":"body that may contain html",
+                        "type":"string",
+                        "format":"markdown"
+                     }
+                  }
+               }
+            }
+         }
+      }
+		
+	},
+	"propertyOrder": ["title","body"]
+}

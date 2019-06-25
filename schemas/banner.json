@@ -1,0 +1,118 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/janxl/nextjs/master/schemas/banner.json",
+
+ "title": "Title",
+    "description": "Description",
+
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+
+    "type": "object",
+    "properties": {
+        "headline":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Headline",
+                        "description":"The banner headline",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":255
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "strapline":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Strapline",
+                        "description":"The banner subheading",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":255
+                     }
+                  }
+               }
+            }
+         }
+      },
+        "background":{
+            "title": "Background",
+            "description": "Background image",
+            "allOf": [
+                { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+            ]
+        },
+        "calltoactiontext":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Call to action text",
+                        "description":"Text for the call to action",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":255
+                     }
+                  }
+               }
+            }
+         }
+      },
+        "calltoactionurl":{  
+         "allOf":[  
+            {  
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{  
+            "values":{  
+               "items":{  
+                  "properties":{  
+                     "value":{  
+                        "title":"Call to action URL",
+                        "description":"The URL that will open when the user clicks",
+                        "type":"string",
+                        "format":"text",
+                        "minLength":0,
+                        "maxLength":255
+                     }
+                  }
+               }
+            }
+         }
+      }
+        
+    },
+    "propertyOrder": ["headline", "strapline", "background", "calltoactiontext", "calltoactionurl"]
+}

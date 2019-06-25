@@ -10,15 +10,18 @@ import TwoColumn from '../components/twocolumn/layout.js'
 
 export default class Dyn extends React.Component {
   
-  static async getInitialProps({ query }) {
+  static async getInitialProps({req, res, route, query}) {
     // Set the site language with a default of English
     let page = ''
     let siteLanguage = query.lang != null ? query.lang : 'en-AU';
     let urlId = query.id != null ? query.id : '';
     let siteName = query.site != null ? query.site : '';
     
-    //console.log('entry=>' + window.location.href)
-    //console.log(window.location.href); 
+    
+    console.log('req-' + req); 
+    console.log('res-' + res); 
+    console.log('route-' + route); 
+    console.log('query-' + query); 
 
     if (query.page != '/')
       page = '/' + query.page;
@@ -62,8 +65,8 @@ export default class Dyn extends React.Component {
     
     const url = `https://c1.adis.ws/cms/content/query?query=%7b%22sys.iri%22:%22http://content.cms.amplience.net/${pageId}%22%7d&scope=tree&store=twe&fullBodyObject=true`
     
-    const res = await fetch(url)
-    const data = await res.json()
+    const response = await fetch(url)
+    const data = await response.json()
 
     return { data, dataMenu, siteName, siteLanguage, page }
   }  

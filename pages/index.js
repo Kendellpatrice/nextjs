@@ -33,6 +33,7 @@ export default class Dyn extends React.Component {
     }
     
     console.log('Running getInit...')
+    console.log('Running getInit -> ...')
     if (query.page != '/')
       page = '/' + query.page;
 
